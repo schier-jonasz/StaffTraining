@@ -1,0 +1,21 @@
+<div style="text-align: right; margin-bottom: 10px; margin-top: 10px"></div>
+<p-table [value]="attendees" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Imię</th>
+      <th>Nazwisko</th>
+      <th>Przydzielone godziny</th>
+      <th>Zarezerwowane godziny</th>
+      <th>Potwierdzone godziny</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-attendee>
+    <tr>
+      <td>{{ attendee.firstname }}</td>
+      <td>{{ attendee.lastname }}</td>
+      <td>{{ attendee.allowedHours }}</td>
+      <td>{{ attendee.totalHours }}</td>
+      <td>{{ attendee.totalConfirmedHours }}</td>
+    </tr>
+  </ng-template>
+</p-table>
