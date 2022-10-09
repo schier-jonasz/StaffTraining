@@ -42,5 +42,10 @@ namespace Euvic.IdentityServer.Quickstart.Account.Api
 
             return result.Succeeded ? Ok(user.Id) : BadRequest(result.Errors);
         }
+
+        [HttpGet]
+        public IActionResult Ping(string msg) {
+            return Ok(msg);
+        }
     }
 }
