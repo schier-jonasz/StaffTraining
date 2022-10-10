@@ -39,15 +39,15 @@ namespace IdentityServerAspNetIdentity
                     AbsoluteRefreshTokenLifetime = 3600,
                     AllowOfflineAccess = true,
                     // where to redirect to after login
-                    RedirectUris = { "http://localhost:4200/index.html", 
-                        "http://localhost:4200/assets/silent-refresh.html",
+                    RedirectUris = { "http://localhost:5173/index.html",
+                        "http://localhost:5173/assets/silent-refresh.html",
                         "https://localhost:44325/swagger/oauth2-redirect.html", 
                         "https://stafftraining-api.azurewebsites.net/swagger/oauth2-redirect.html"
                     },
 
                     // where to redirect to after logout
                     PostLogoutRedirectUris = { "http://localhost:4200/signout-callback-oidc" },
-                    AllowedCorsOrigins = new[] { "http://localhost:4200", "https://localhost:44325", "https://stafftraining-api.azurewebsites.net"},
+                    AllowedCorsOrigins = new[] { "http://localhost:5173", "https://localhost:44325", "https://stafftraining-api.azurewebsites.net"},
                     AllowedScopes = new List<string>
                     {
                         IdentityServerConstants.StandardScopes.OpenId,

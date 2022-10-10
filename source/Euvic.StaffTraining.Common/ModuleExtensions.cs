@@ -47,7 +47,7 @@ namespace Euvic.StaffTraining.Common
             applicationBuilder.UseCors(builder =>
               {
                   builder
-                  .SetIsOriginAllowed(origin => allowedOrigins.Contains(origin))
+                  .AllowAnyOrigin()
                   .AllowAnyMethod()
                   .AllowAnyHeader();
               });
